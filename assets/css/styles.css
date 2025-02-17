@@ -1,0 +1,326 @@
+
+
+:root {
+    --c-brandl :white;
+    --c-dark: #212529;
+    --c-brand: #83bab0; 
+    --c-brand-light: #83bab0; 
+    --c-brand-rgb: 131, 186, 176;
+    --c-body: #474747;
+    --font-base: "Inter", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
+    --transition: all 0.5s ease;
+
+
+    
+}
+
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600;
+    color: var(--c-dark);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.custom-navbar {
+    background-color: var(--c-brand);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--c-brandl);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+.navbar-brand {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: #fdfcfc; 
+    text-decoration: none; 
+  }
+  
+  .navbar-brand:hover {
+    color: #5d64ef;
+  }
+  
+
+/* HOME */
+
+#home{ 
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.285),rgba(var(--c-brand-rgb), 0.285)), url(../images//background.jpg);
+    background-position: center;
+    background-size:cover;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); 
+
+}
+#home h5 {
+    width: 60%; 
+    margin: auto; 
+    padding: 10px 0; 
+    border-top: 2px solid #ffffff; 
+    border-bottom: 2px solid #ffffff; 
+    text-align: center; 
+}
+
+/* SECTION TITLE */
+.section-title{
+    margin-bottom: 50px; 
+    text-align: center;
+
+}
+.section-title .line{
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+ .section-title p{ 
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--c-dark); 
+
+ }
+
+/* ICONBOX */
+.iconbox{
+    width:60px;
+    height: 60px;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-brand);
+    font-size: 24px;
+    background: rgba(var(--c-brand-rgb),0.04);
+    flex:none;
+    border-radius: 10px;
+    transition: var(--transition); 
+
+}
+
+.iconbox + div h5 {
+    font-size: 1.25rem; 
+    margin: 0; 
+}
+
+/* Adjust alignment */
+#about .d-flex {
+    align-items: center; 
+}
+
+
+ /* IMAGE ZOOM*/ 
+image-zoom{
+    position: relative;
+    overflow: hidden;
+}
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img {
+    transition: transform 0.3s ease; 
+}
+
+.image-zoom-wrapper:hover img {
+    transform: scale(1.1); 
+}
+/* SERVICE CARDS */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.service-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    transition: bottom 0.3s ease;
+    width: 100%;
+    background-color: rgba(var(--c-brand-rgb),0.6);
+    color: #fff;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.service-card:hover .service-overlay {
+    bottom: 0;
+}
+
+
+
+
+
+/* BOOKING*/
+#book{
+    position: relative;
+    z-index: 2;
+    
+}
+#book::after{
+    content: "";
+    width:100%;
+    height: 70%;
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.185),rgba(var(--c-brand-rgb), 0.185)), url(../images//wedding4.jpeg);
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#book .form-control{
+    border-radius: 0;
+}
+#book .form-control:focus{
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+
+/* BTN */
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: var(--c-brand);
+    border-color: var(--c-brand);
+    color: white;
+}
+
+.btn-brand:hover {
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: white;
+}
+/* FOOTER */
+footer {
+    padding-top: 120px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+footer li,
+footer p,
+footer a {
+    color: rgba(255,255,255,0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .line {
+    width: 40px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover {
+    background-color: var(--c-brand);
+    color: white;
+}
+
+
+
+
+
+
+  
+  #confirmation-message {
+    display: none;
+    position: relative;
+    background-color: var(--c-brand); 
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-top: 20px; 
+    opacity: 0.7;
+}
+
+
+#confirmation-message::before {
+    font-family: var(--font-base);
+    font-weight: 900;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+
+
+
+
+
+
